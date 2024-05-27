@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Palanquin", sans-serif;
+}
+
+@layer utilities {
+  .app {
+    @apply bg-primary font-palanquin;
+  }
+
+  .app-containers {
+    @apply flex-1 w-full flex-col;
+  }
+
+  .head-text {
+    @apply text-center  text-5xl font-palanquin font-extrabold capitalize 3xl:text-7xl xs:text-4xl;
+  }
+
+  .p-text {
+    @apply text-gray-color text-sm leading-7 text-left 3xl:text-3xl;
+  }
+
+  .text-bold {
+    @apply text-base font-extrabold text-black text-left 3xl:text-4xl max-xs:text-sm;
+  }
+
+  .item-active {
+    @apply bg-secondary text-white-color;
+  }
+
+  .work-link {
+    @apply w-12 h-12 rounded-full bg-[#00000080] text-white-color m-4 cursor-pointer transition-all duration-300 ease-linear font-extrabold;
+  }
+
+  .work-link-svg {
+    @apply w-1/2 h-1/2 text-white-color;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .header {
+    @apply 3xl:pt-32 max-xl:flex-col max-xs:pt-24 max-xs:px-4 max-xs:pb-8;
+  }
+
+  .info-tag {
+    @apply py-4 px-8 border-white-color rounded-xl w-auto shadow-md;
+  }
+
+  .child {
+    @apply [&:nth-child(1)]:w-[100px] [&:nth-child(1)]:h-[100px] 
+    [&:nth-child(2)]:w-[150px] [&:nth-child(2)]:h-[150px] [&:nth-child(2)]:m-7 
+    [&:nth-child(3)]:w-[70px] [&:nth-child(3)]:h-[70px] 3xl:[&:nth-child(1)]:w-[400px] 3xl:[&:nth-child(1)]:h-[400px]
+    3xl:[&:nth-child(2)]:w-[170px] 3xl:[&:nth-child(2)]:h-[170px]
+    3xl:[&:nth-child(3)]:w-[200px] 3xl:[&:nth-child(3)]:h-[200px];
+  }
+}
